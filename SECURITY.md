@@ -8,9 +8,9 @@ To report a vulnerability, create a new topic in the Issues. Be straight to the 
 
 Types of vulnerabilities to report:
 
-|   |   |
-|:-:|---|
-|   |   |
+|  test |   |
+|:-:test|---|
+|  test |   |
 |   |   |
 |   |   |
 |   |   |
