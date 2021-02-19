@@ -1,0 +1,33 @@
+{
+    "name": "wallstreetbets-visualizer",
+    "version": "0.1.0",
+    "private": false,
+    "main": "dist/index.js",
+    "description": "The frontend website for displaying data for WallStreetBets Analytics Tool",
+    "scripts": {
+        "build": "rimraf ./dist*/ && cross-env webpack --config webpack.config.js --mode production",
+        "dev": "cross-env NODE_ENV=development webpack serve --mode development"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.12.10",
+        "@babel/plugin-transform-runtime": "^7.12.10",
+        "@babel/preset-env": "^7.12.11",
+        "@babel/preset-react": "^7.12.10",
+        "babel-loader": "^8.2.2",
+        "cross-env": "^7.0.3",
+        "html-webpack-plugin": "^4.5.1",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "rimraf": "^3.0.2",
+        "sass": "^1.32.6",
+        "sass-loader": "^11.0.1",
+        "style-loader": "^2.0.0",
+        "url-loader": "^4.1.1",
+        "webpack": "^5.11.1",
+        "webpack-cli": "^4.3.1",
+        "webpack-dev-server": "^3.11.2"
+    },
+    "dependencies": {
+        "css-loader": "^5.0.2"
+    }
+}
