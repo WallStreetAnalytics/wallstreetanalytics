@@ -34,7 +34,7 @@ def index():
 
 
 @app.route('/CathieWoods')
-def service():
+def CathieWoods():
 	df = recipes.get_cathie_woods(proxies)
 	funds = list(set(list(df['fund'])))
 	# table_html = table_df.to_html()
