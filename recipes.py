@@ -9,18 +9,15 @@ import warnings
 import datetime
 from datetime import datetime
 from datetime import timedelta
-import warnings
-import datetime
-from datetime import datetime
-from datetime import timedelta
+import time
 warnings.filterwarnings("ignore")
 
 
 
 
 
-def get_daily_update(url,frames, proxies=None, verify=False):
-	response = requests.get(url, verify=verify, proxies=proxies)
+def get_daily_update(url,frames,verify=False):
+	response = requests.get(url, verify=verify)
 	data = str(response.text)
 	df = pd.DataFrame([x.split(',') for x in data.split('\n')])
 	new_header = df.iloc[0] #grab the first row for the header
@@ -41,7 +38,7 @@ def get_daily_update(url,frames, proxies=None, verify=False):
 	df = df.iloc[0:int(first_blank)].copy()
 	df['date']= pd.to_datetime(df['date'])
 	df['shares'] = pd.to_numeric(df['shares'],errors='coerce')
-	df['market_value'] = pd.to_numeric(df['market_value'],errors='coerce')
+	# df['market_value'] = pd.to_numeric(df['market_value'],errors='coerce')
 	df['weight'] = pd.to_numeric(df['weight'],errors='coerce')
 	# df['id'] = df['fund'] + df['ticker']
 	# df['price'] = df['market_value'] / df['shares']
@@ -60,17 +57,15 @@ def get_daily_update(url,frames, proxies=None, verify=False):
 
 # df = pd.concat(frames).reset_index(drop=True)
 
-def get_cathie_woods(proxies=None):
-	try:
-		return df
-	except:
-		url_list = []
-		url_list.append('https://ark-funds.com/wp-content/fundsiteliterature/csv/ARK_AUTONOMOUS_TECHNOLOGY_&_ROBOTICS_ETF_ARKQ_HOLDINGS.csv')
-		url_list.append('https://ark-funds.com/wp-content/fundsiteliterature/csv/ARK_GENOMIC_REVOLUTION_MULTISECTOR_ETF_ARKG_HOLDINGS.csv')
-		url_list.append('https://ark-funds.com/wp-content/fundsiteliterature/csv/ARK_INNOVATION_ETF_ARKK_HOLDINGS.csv')
-		frames = []
-		for url in url_list:
-			get_daily_update(url, frames, proxies)
+def get_cathie_woods():
 
-		df = pd.concat(frames).reset_index(drop=True)
-		return df
+	url_list = []
+	url_list.append('https://ark-funds.com/wp-content/fundsiteliterature/csv/ARK_AUTONOMOUS_TECHNOLOGY_&_ROBOTICS_ETF_ARKQ_HOLDINGS.csv')
+	url_list.append('https://ark-funds.com/wp-content/fundsiteliterature/csv/ARK_GENOMIC_REVOLUTION_MULTISECTOR_ETF_ARKG_HOLDINGS.csv')
+	frames = []
+	for url in url_list:
+
+		get_daily_update(url, frames)
+
+	df = pd.concat(frames).reset_index(drop=True)
+	return df

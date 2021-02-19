@@ -35,8 +35,16 @@ def index():
 
 @app.route('/CathieWoods')
 def CathieWoods():
-	df = recipes.get_cathie_woods(proxies)
+	df = recipes.get_cathie_woods()
+	df.set_index(['id'], inplace=True)
+	df.index.name=None
+
 	funds = list(set(list(df['fund'])))
+	df_list = []
+	for f in funds:
+		next_df = df.loc[df.fund==f]
+		df_list.append(next_df.to_html(classes='female'))
+
 	# table_html = table_df.to_html()
 	return render_template('CathieWoods.html', tables=[df.to_html(classes='mystyle')], titles=df.columns.values)
 
