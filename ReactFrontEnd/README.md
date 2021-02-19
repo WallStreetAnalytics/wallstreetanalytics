@@ -20,7 +20,7 @@ The purpose of this website is to provide a simple site that can be used to visu
 
 1. install this repo according to the instructions above.
 2. run the command `npm run build` to compile the code.
-3. upload the files in the `~/builds` folder to your webserver.
+3. upload the files in the `~/dist` folder to your webserver.
 4. the site is now available on your webserver.
 
 # Anything else I should know?
