@@ -1,0 +1,71 @@
+  .profileimg {
+    height: 200px;
+  }
+  body {
+    background-color: rgb(118, 159, 205);
+  }
+
+  html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+  
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;            /* Footer height */
+}
+
+
+.cust-white-background{
+background: rgb(247, 251, 252);
+}
+
+.cust-border {
+  /*flex: 1;*/
+  background: rgb(185, 215, 234);
+  border: 1px solid grey;
+}
+.cust-white-border{
+background: rgb(247, 251, 252);
+border: 1px solid grey;
+}
+
+
+.card-header{
+background: #212529 !important;
+margin: 10px;
+color: rgba(255,255,255,.5) !important;
+}
+
+.card{
+margin: 10px;
+}
+
+.mystyle {
+    font-size: 11pt; 
+    font-family: Arial;
+    border-collapse: collapse; 
+    border: 1px solid silver;
+
+}
+
+.mystyle td, th {
+    padding: 5px;
+}
+
+.mystyle tr:nth-child(even) {
+    background: #E0E0E0;
+}
+
+.mystyle tr:hover {
+    background: silver;
+    cursor: pointer;
+}
