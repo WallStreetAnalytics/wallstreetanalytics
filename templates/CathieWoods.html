@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="row justify-content-md-center">
+  <div class="col">
+    {% for table in tables %}
+            {{titles[loop.index]}}
+            {{ table|safe }}
+{% endfor %}
+  </div>
+</div>
+{% endblock %}
