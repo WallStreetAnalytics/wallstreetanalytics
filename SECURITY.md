@@ -6,7 +6,7 @@ If you are going to contribute to this project, please take some time out to rea
 
 To report a vulnerability, create a new topic in the Issues. Be straight to the point and precise. 
 
-Bugs to report:
+Types of vulnerabilities to report:
 
 |   |   |
 |:-:|---|
@@ -16,7 +16,7 @@ Bugs to report:
 |   |   |
 |   |   |
 
-This is a completely crowd sourced project and thus, there is no bug bounty. 
+This is a completely crowd sourced project and thus, there is no bug bounty as of now. However, this may change in the future. 
 
 ## Security Update policy
 
