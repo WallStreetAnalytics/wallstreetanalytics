@@ -1,0 +1,51 @@
+version: '3'
+
+volumes:
+  base-data:
+  db-data:
+
+services:
+  db:
+    image: postgres
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - db-data:/data/db
+
+  backend:
+    restart: always
+    env_file:
+      - .env
+    build:
+      context: ./backend
+      dockerfile: ./Dockerfile
+    ports:
+      - '5000:5000'
+    command: bash -c "echo 'yolo'"
+    depends_on:
+      - db
+    environment:
+      - PYTHONUNBUFFERED=0
+    volumes:
+      - base-data:/data
+      - ./backend/:/code
+
+  frontend:
+    restart: always
+    env_file:
+      - .env
+    build:
+      context: ./frontend
+      dockerfile: ./Dockerfile
+    depends_on:
+      - backend
+
+  proxy:
+    build:
+      context: ./proxy
+      dockerfile: ./Dockerfile
+    ports:
+      - '0.0.0.0:80:80'
+    env_file:
+      - .env
