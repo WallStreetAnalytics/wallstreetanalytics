@@ -2,7 +2,15 @@
 
 Wall Street Analytics is an open source market analytics tool intended to democratize access to data, resources, and education to allow retail investors to make better informed decisions about potential market opportunities.
 
-There is currently a lot of excitement around this project, and a lot of different directions that people are wanting to go. As we try to get everything organized, and everyone moving in one direction, most of the conversation is taking place in the WallStreet Analytics Discord channel. If you do not have access to the channel, please send a message to zoox101 on GitHub or send a message to u/claireupvotes on Reddit and we will get you added as quickly as possible. For those that would prefer to continue the discussion here, we will do our best to moderate the issues pages.
+## Vision Statement
+
+On February 18th, in the "Virtual Hearing - Game Stopped? Who Wins and Loses When Short Sellers, Social Media, and Retail Investors Collide," congressional hearing, it became evident that hedge funds have already started investing exorbitant amounts of resources into data mining and analysis on stock trends in social media.
+
+While these organizations have a significant financial advantage over average retail investors that allow them to make more educated decisions, we the people have the manpower, the expertise, and the determination to provide this same information to everyone. We will collaboratively collect and publicly disseminate the same information that hedge funds are paying for with the goal of leveling the playing field for the average retail investor.
+
+## Current Updates
+
+There is currently a lot of excitement around this project, and a lot of different directions that people are wanting to go. As we try to get everything organized, and everyone moving in one direction, most of the conversation is taking place in the WallStreet Analytics Discord channel. If you do not have access to the channel, please send a message to u/claireupvotes on Reddit and we will get you added as quickly as possible. For those that would prefer to continue the discussion here, we will do our best to moderate the issues pages.
 
 ## What's the Plan?
 
@@ -41,9 +49,3 @@ Start by filling out the forms above and joining the discussion on the Discord c
 _What is this about an angel investor?_
 
 One of the project administrators was contacted by an angel investor shortly after the initial Reddit post gained traction. They were turned away. This is an open source project, not a startup. Private equity investments are not in line with this project's mission statement.
-
-## Vision Statement
-
-On February 18th, in the "Virtual Hearing - Game Stopped? Who Wins and Loses When Short Sellers, Social Media, and Retail Investors Collide," congressional hearing, it became evident that hedge funds have already started investing exorbitant amounts of resources into data mining and analysis on stock trends in social media.
-
-While these organizations have a significant financial advantage over average retail investors that allow them to make more educated decisions, we the people have the manpower, the expertise, and the determination to provide this same information to everyone. We will collaboratively collect and publicly disseminate the same information that hedge funds are paying for with the goal of leveling the playing field for the average retail investor.
