@@ -48,4 +48,4 @@ Start by filling out the forms above and joining the discussion on the Discord c
 
 _What is this about an angel investor?_
 
-One of the project administrators was contacted by an angel investor shortly after the initial Reddit post gained traction. They were turned away. This is an open source project, not a startup. Private equity investments are not in line with this project's mission statement.
+One of the project administrators was contacted by an angel investor shortly after the initial Reddit post gained traction. They were turned away. This is an open source project, not a startup. Private equity investments are not in line with the vision for this project. More information on acceptable/unacceptable sources of funding will be forthcoming in the official mission statement.
