@@ -1,0 +1,64 @@
+{
+    "name": "amphp/websocket-client",
+    "description": "Async WebSocket client for PHP based on Amp.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bob Weinand",
+            "email": "bobwei9@hotmail.com"
+        },
+        {
+            "name": "Aaron Piotrowski",
+            "email": "aaron@trowski.com"
+        },
+        {
+            "name": "Niklas Keller",
+            "email": "me@kelunik.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/amphp/websocket-client/issues"
+    },
+    "keywords": [
+        "async",
+        "non-blocking",
+        "websocket",
+        "client",
+        "http",
+        "amp",
+        "amphp"
+    ],
+    "require": {
+        "php": ">=7",
+        "amphp/amp": "^2",
+        "amphp/http": "^1",
+        "amphp/byte-stream": "^1",
+        "amphp/socket": "^0.10",
+        "league/uri-schemes": "^1.2"
+    },
+    "require-dev": {
+        "amphp/http-server": "^1",
+        "amphp/websocket-server": "^1",
+        "amphp/phpunit-util": "^1",
+        "friendsofphp/php-cs-fixer": "^2.9",
+        "phpunit/phpunit": "^6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Amp\\Websocket\\": "lib"
+        },
+        "files": [
+            "lib/functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Amp\\Websocket\\Test\\": "test"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "7.0.13"
+        }
+    }
+}

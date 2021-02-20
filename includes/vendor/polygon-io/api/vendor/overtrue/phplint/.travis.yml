@@ -1,0 +1,19 @@
+dist: trusty
+
+language: php
+
+php:
+  # using major version aliases
+  - 5.5
+  - 5.6
+  - 7.0
+  - 7.1
+  - 7.2
+
+before_script:
+  - composer self-update
+  - composer install --prefer-source --no-interaction --dev
+
+script: ./bin/phplint ./ --no-cache
+matrix:
+  fast_finish: true

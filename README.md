@@ -1,14 +1,60 @@
-# Addressing moderator posts from reddit:
-After our conversation with a WSB moderator and seeing his response on reddit, we believe there may have been some miscommunication. We ARE NOT planning on selling out to some "angel investor" or anything. There has been one conversation that has occurred between us and said investor, and we are currently unsure what he would want out of it. It was merely intended to be mentioned in passing to illustrate the potential this idea has gathered within hours of its conception.
+# stocks-testing
+Stock analytics app (WIP)
 
-Anything that goes against our vision statement, goals, or ideals of leveling the playing field will NOT be tolerated. To address the "it's happening whether you help or not", that was first brought up by the reddit moderator (in different terms) and we were all in agreement. Someone, somewhere, is going to do this regardless of WSB's support. Do we want it to be us, who we know have good intentions, or the other people?
+Currently, the API gateway is the only functional code. 
 
-# WallStreet Analytics
-An endeavor to create an analytics tool to democratize the information hedge funds are creating teams to collect.
+# Using the API Gateway
+To use the API gateway, first configure your API. Some APIs are already provided in the `/includes/functions/apis/` folder. 
+If required, add your credentials to `/includes/functions/apis/{api name}/api.config.php`
 
-## Vision Statement
+Nasdaq API does not require credentials, since it is a public endpoint, so you can use that to test your installation. But you may wish to add custom options to your Guzzle requests, such as a proxy, which can be done in the API config file.
 
-On February 18th, in the "Virtual Hearing - Game Stopped? Who Wins and Loses When Short Sellers, Social Media, and Retail Investors Collide," congressional hearing, it became evident that hedge funds have already started investing exorbitant amounts of resources into data mining and analysis on stock trends in social media.
+**Example Requests**
 
-While these organizations have a significant financial advantage over average retail investors that allow them to make more educated decisions, we the people have the manpower, the expertise, and the determination to provide this same information to everyone. We will collaboratively collect and publicly disseminate the same information that hedge funds are paying for with the goal of leveling the playing field for the average retail investor.
+To fetch data from an API, POST to ./api/api.php with JSON. For example, to get SEC filings from Nasdaq.com for symbols GME & AAPL, you can make this request:
 
+POST https://www.your.server/api/api.php
+```
+{
+	"provider":"nasdaqapi", 
+	"operation":"filings",
+	"params":{
+		"symbol":["GME","AAPL"],
+		"limit":26,
+		"sort": "companyName"
+	}
+}
+```
+ 
+POST https://www.your.server/api/api.php
+If you have configured the fintel API, you can make the same request, but change the provider. 
+```
+{
+	"provider":"fintelapi", 
+	"operation":"filings",
+	"params":{
+		"symbol":["GME","AAPL"]
+	}
+}
+```
+
+**Notes**
+
+Fintelapi does not offer as many refinements as the nasdaqapi provider, so you'll notice our request has less options. In this case, we could implement a result 'limit' in our PHP when processing the data from fintel. 
+
+You'll also notice that the response from the API gateway is formatted as consistently as possible. The idea is to map responses to a common format so that the data can be ingested (either by the frontend code or a database) at a later time with minimal effort.
+
+# What's left to do?
+
+1. Front end:
+- Templating
+- Everything
+2. Back End:
+- Screeners / algorithms
+- Add a request limiting middleware to Guzzle so we can obey QPS or QPM limits for certain APIs (reddit)
+- Add more APIs to proxy
+- Create a cron worker endpoint to enable data collection operations from finra, reddit, etc...
+- Social sentiment analysis
+- Allow a specific installation to be deployed as an API server, frontend, compute node
+3. Other:
+- Fix composer requirements files
