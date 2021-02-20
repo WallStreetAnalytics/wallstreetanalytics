@@ -2,7 +2,8 @@
 //API Router
 namespace Stocks;
 
-ini_set('display_errors',1);
+ini_set('display_errors',0); //force error display to off
+
 header('content-type: application/json');
 
 include(__DIR__.'/../includes/maininclude.php');
@@ -30,7 +31,7 @@ if(strlen(file_get_contents('php://input')) > 0){
 	exit;
 }
 
-//sanitize function for array_map on "params" field
+//sanitize function for array_map on "params" field, could be improved.
 function quicksanitize($str) {
 	return preg_replace("/[[:^print:]]/", "", $str);
 }
@@ -56,6 +57,9 @@ if(!isset($operation)){
 }
 
 //create object
+//See /includes/functions/apis/base/api.php for the main StocksAPI class
+//See /includes/functions/apis/{provider}/api.php for any provider-specific classes
+
 $sapi = new StocksAPI($provider);
 
 if(!$sapi){
@@ -70,19 +74,4 @@ if(!$response){
 }else{
 	echo json_encode($response);
 }
-
-//tests...
-//$sapi = new StocksAPI('polygonapi');
-//$sapi->getData('status');
-//$testdata = $sapi->getData('ticker'); //Ticker for all items
-//$testdata = $sapi->getData('ticker',['symbol'=>'AAPL']); //Specific symbol
-//$testdata = $sapi->getData('ticker',['tickertype'=>'losers']); //losers or gainers
-//$testdata = $sapi->getData('historytxn',['symbol' => 'GME', 'date'=>'2020-01-29']);
-//$testdata = $sapi->getData('historyqt',['symbol' => 'GME', 'date'=>'2020-01-29']);
-//$testdata = $sapi->getData('agg',['symbol' => 'GME', 'startdate'=>'2020-01-29', 'enddate'=>'2021-01-29', 'timespan' => 'hour']);
-//$testdata = $sapi->getData('agg',['symbol' => ['GME','AAPL','TRIB','NOK','BB'], 'startdate'=>'2020-01-29', 'enddate'=>'2021-01-29', 'timespan' => 'hour']);
-//$testdata = $sapi->getData('financials',['symbol' => ['GME','AAPL','TRIB','NOK','BB']]);
-//$testdata = $sapi->getData('news',['symbol' => ['GME','AAPL','TRIB','NOK','BB']]);
-//$testdata = $sapi->getData('corpdetails',['symbol' => ['GME','AAPL','TRIB','NOK','BB']]);
-//$testdata = $sapi->getData('corpdetails',['symbol' => ['GME','AAPL','TRIB','NOK','BB']]);
 ?>
