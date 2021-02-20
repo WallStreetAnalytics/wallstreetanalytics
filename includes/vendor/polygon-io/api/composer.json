@@ -1,0 +1,25 @@
+{
+    "name": "polygon-io/api",
+    "description": "polygon.io php client",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Julien Prugne",
+            "email": "julien@webeleon.dev"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.4",
+        "amphp/websocket-client": "^0.2.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "PolygonIO\\": "src/"
+        }
+    },
+    "require-dev": {
+        "overtrue/phplint": "^1.1",
+        "phpunit/phpunit": "^8"
+    }
+}

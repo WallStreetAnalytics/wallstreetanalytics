@@ -1,0 +1,38 @@
+name: Github Build
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ['7.4', '7.3', '7.2', '8.0']
+    name: PHP ${{ matrix.php }}
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: xdebug
+      - name: Report PHP version
+        run: php -v
+      - name: Validate composer.json and composer.lock
+        run: composer validate
+      - name: Get Composer Cache Directory
+        id: composer-cache
+        run: echo "::set-output name=dir::$(composer config cache-files-dir)"
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ matrix.php }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: ${{ matrix.php }}-composer-
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress --no-suggest
+      - name: Run PHPStan
+        run: composer phpstan
+      - name: Run PHP-CS
+        run: composer check-style
+      - name: Run test suite
+        run: vendor/bin/phpunit

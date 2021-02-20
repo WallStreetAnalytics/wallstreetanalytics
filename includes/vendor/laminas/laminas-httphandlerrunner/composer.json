@@ -1,0 +1,71 @@
+{
+    "name": "laminas/laminas-httphandlerrunner",
+    "description": "Execute PSR-15 RequestHandlerInterface instances and emit responses they generate.",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "laminas",
+        "components",
+        "mezzio",
+        "psr-7",
+        "psr-15"
+    ],
+    "homepage": "https://laminas.dev",
+    "support": {
+        "docs": "https://docs.laminas.dev/laminas-httphandlerrunner/",
+        "issues": "https://github.com/laminas/laminas-httphandlerrunner/issues",
+        "source": "https://github.com/laminas/laminas-httphandlerrunner",
+        "rss": "https://github.com/laminas/laminas-httphandlerrunner/releases.atom",
+        "chat": "https://laminas.dev/chat",
+        "forum": "https://discourse.laminas.dev"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.2.x-dev",
+            "dev-develop": "1.3.x-dev"
+        },
+        "laminas": {
+            "config-provider": "Laminas\\HttpHandlerRunner\\ConfigProvider"
+        }
+    },
+    "require": {
+        "php": "^7.1",
+        "laminas/laminas-zendframework-bridge": "^1.0",
+        "psr/http-message": "^1.0",
+        "psr/http-message-implementation": "^1.0",
+        "psr/http-server-handler": "^1.0"
+    },
+    "require-dev": {
+        "laminas/laminas-coding-standard": "~1.0.0",
+        "laminas/laminas-diactoros": "^1.7 || ^2.1.1",
+        "phpunit/phpunit": "^7.0.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Laminas\\HttpHandlerRunner\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LaminasTest\\HttpHandlerRunner\\": "test/"
+        },
+        "files": [
+            "test/TestAsset/SapiResponse.php"
+        ]
+    },
+    "scripts": {
+        "check": [
+            "@cs-check",
+            "@test"
+        ],
+        "cs-check": "phpcs",
+        "cs-fix": "phpcbf",
+        "test": "phpunit --colors=always",
+        "test-coverage": "phpunit --colors=always --coverage-clover clover.xml"
+    },
+    "replace": {
+        "zendframework/zend-httphandlerrunner": "^1.1.0"
+    }
+}
