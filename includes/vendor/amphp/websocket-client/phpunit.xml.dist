@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit bootstrap="./vendor/autoload.php" colors="true">
+    <testsuites>
+        <testsuite name="Tests">
+            <directory>./test</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist addUncoveredFilesFromWhitelist="true">
+            <directory>./lib</directory>
+        </whitelist>
+    </filter>
+    <listeners>
+        <listener class="Amp\PHPUnit\LoopReset"/>
+    </listeners>
+</phpunit>
