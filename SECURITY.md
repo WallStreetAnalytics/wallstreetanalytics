@@ -1,5 +1,7 @@
 # Security Policy
 
+NOTE: Currently, this policy is more for the developers rather the end users. This will however change when there is a MVP and the application is available to users. 
+
 If you are going to contribute to this project, please take some time out to read through this. Follow the set rules and NO exceptions. 
 
 We focus on the following principles:
@@ -32,7 +34,7 @@ This is a completely crowd sourced project and thus, there is no bug bounty as o
 
 ## Security Update policy
 
-Updates to the security policy will be 
+As the security policy get updated, the community will be notified. The exact channels to be used is still yet to be decided. As of now, SECURITY.md will be the main channel for security updates.
 
 ## Known security gaps & future enhancements
 
@@ -42,10 +44,39 @@ Since the project is in its early stages of design, there is much to do before w
 
 ### Proper DB Connection
 
-### PII handling
+Only keep DB connections for as long as necessary and close them promptly
 
-### OPT IN & OPT OUT Policy
+## UX/UI Security
 
-### UX/UI Security
+Design for security. 
+
+### 1. Different actions must look different. 
+
+An user might perform critical tasks that might have dramatic impact, for example chanigng his password. In this case, the UI must make it clear what it is user needs to do right now. Conformaition feedback is also necessary. 
+
+Use of appropriate icons is necessary.
+
+### 2. Show the user what will happen next
+
+Predictability is important and users will appreciate it. For example, if a link is bringing the user to another website or application, let them know before hand. 
+
+### 3. Show only necessary information.
+
+Do not present too much information. This will help the UI stay clean and not overwhelm the user. Not to mention, any sensitive information such as passwords needs to be masked using *s.
+
+### 4. Never trade seucurity over beauty.
+
+I know, we all love a clean minimalistic website but it must not compromise security. 
+
+## PII handling
+
+
+## OPT IN & OPT OUT Policy
+
+We must treat the users with utmost respect to their information. If the user are not willing to provide their information, they must be able to choose to out of any personal information collection. If they do choose to opt out, all previously stored information must be purged and no backup may be stored. 
+
+If the user is comfortable with providing us their informaiton, they can choose to opt in. At no point shall we collect user information without clearly asking for the user's permission. 
+
+
 
  
