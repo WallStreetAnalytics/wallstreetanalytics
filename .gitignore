@@ -2,3 +2,5 @@
 .nova
 .Trashes
 .Spotlight-V100
+composer.lock
+vendor

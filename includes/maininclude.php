@@ -18,12 +18,23 @@ foreach(new \RecursiveIteratorIterator($dir) as $filename => $file){
 		}
 	}
 }
-/*
-include(__DIR__.'/functions/apis/base/api.php');
-include(__DIR__.'/functions/apis/polygon/api.php');
-include(__DIR__.'/functions/apis/fintel/api.php');
-include(__DIR__.'/functions/apis/lowfloatdotcom/api.php');
-*/
+
+//common funcs
+foreach (glob(__DIR__."/functions/common/*.php") as $filename)
+{
+	require_once $filename;
+}
+//database funcs
+foreach (glob(__DIR__.'/functions/database/*.php') as $filename)
+{
+	require_once $filename;
+}
+
+//layout funcs
+foreach (glob(__DIR__.'/functions/layoutengine/*.php') as $filename)
+{
+	require_once $filename;
+}
 
 
 //Don't you dare touch this

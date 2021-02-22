@@ -298,12 +298,13 @@ class StocksAPI {
 			////////////////////////////////////////////////////////////////////////
 			//getws:															  //
 			//This request returns your provider's webSocket configuration	  	  //
+			//so it can be made available to the frontend gui					  //
 			//This may expose your API key to the public, 						  //
 			//so exposeWebSocket must be set to true in your provider config file //
 			////////////////////////////////////////////////////////////////////////
 			case 'getws':
 				if($GLOBALS['APIConfigs'][$this->providerID]['exposeWebSocket'] != true){
-					makeJSONerrorAndExit('You must set exposeWebSocket to true in your API config file to use websockets. This will expose your private API Key, DO NOT enable this on a publicly accessable server.');
+					makeJSONerrorAndExit('You must set exposeWebSocket to true in your API config file to use websockets. This will expose your private API Key.');
 					exit;
 				}else{
 					if(empty($GLOBALS['APIConfigs'][$this->providerID]['webSocketConfig'])){
@@ -315,6 +316,18 @@ class StocksAPI {
 						$result['providerid'] = $this->providerID;
 						return $result;
 					}	
+				}
+			break;
+			
+			//test case for websocket, pull data and output to user
+			case 'wstest':
+				$status = $api->sendWSTestRequest();
+				if(!$status){
+					makeJSONerrorAndExit($this->providerID.': API ERROR! Test request failed.');
+					return false;
+				}else{
+					$result = ['status' => 'ok', 'message' => $this->providerID.': API is up.', 'details' => $status];
+					return $result;
 				}
 			break;
 			

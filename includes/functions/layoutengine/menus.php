@@ -1,7 +1,7 @@
 <?php
 namespace Stocks;
 
-public class menu extends LayoutEngine{
+class menu extends LayoutEngine{
 	
 	function __constructor($params){
 		$this->currentPage = $params['pagename'];

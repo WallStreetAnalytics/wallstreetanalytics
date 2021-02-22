@@ -2,7 +2,7 @@
 //API Router
 namespace Stocks;
 
-ini_set('display_errors',0); //force error display to off
+ini_set('display_errors',1); //force error display to off
 
 header('content-type: application/json');
 
