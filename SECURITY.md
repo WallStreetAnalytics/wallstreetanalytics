@@ -40,4 +40,12 @@ Since the project is in its early stages of design, there is much to do before w
 
 ## Secure Coding policiy
 
+### Proper DB Connection
+
+### PII handling
+
+### OPT IN & OPT OUT Policy
+
+### UX/UI Security
+
  
