@@ -1,5 +1,45 @@
 # Announcements
 
+This is a log of all announcements that have been posted in the Discord #announcements channel to increase transparency to github.
+
+## suddenclaireity#4409 02/18/2021
+
+`@everyone` My post on reddit was just removed. That's okay. I'm not sure why and we're looking into it.
+
+This is probably the break we needed. We have an incredible amount of support. We don't need a top-of-reddit post to make a difference. We can finish up responding to the DMs since they're agnostic of the post. From there, we'll democratize the process of how we move forward.
+
+## suddenclaireity#4409 02/18/2021
+
+`@everyone`
+
+On February 18th, in the "Virtual Hearing - Game Stopped? Who Wins and Loses When Short Sellers, Social Media, and Retail Investors Collide," congressional hearing, it became evident that hedge funds have already started investing exorbitant amounts of resources into data mining and analysis on stock trends in social media.
+
+While these organizations have a significant financial advantage over average retail investors that allow them to make more educated decisions, we the people have the manpower, the expertise, and the determination to provide this same information to everyone. We will collaboratively collect and publicly disseminate the same information that hedge funds are paying for with the goal of leveling the playing field for the average retail investor.
+
+--
+
+This is our vision statement. We may change and perfect the wording in the future, but the purpose and meaning behind this statement will not change. We will never accept any funds or make any deals with anyone who wants to contribute if it means contradicting these ideals in anyway.
+
+Edit: I wanted to get this out ASAP in response to zjz's message. A more detailed response to follow.
+
+## Auzymundius#0247 02/18/2021
+
+`@everyone` After our conversation with zjz and seeing his response on reddit, we believe there may have been some miscommunication. We ARE NOT planning on selling out to some "angel investor" or anything. There has been one conversation that has occurred between us and said investor, and we are currently unsure what he would want out of it. It was merely intended to be mentioned in passing to illustrate the potential this idea has gathered within hours of its conception.
+
+Anything that goes against our vision statement, goals, or ideals of leveling the playing field will NOT be tolerated. To address the "it's happening whether you help or not", that was first brought up by zjz (in different terms) and we were all in agreement. Someone, somewhere, is going to do this regardless of WSB's support. Do we want it to be us, who we know have good intentions, or the other people?
+
+## notjoshjames#3141 02/19/2021
+
+Hey `@everyone`, here's a quick survey for everyone to take. We'll all have a chance to learn more about each other and our ideas tomorrow. Let's get some rest and rally in the AM (just like GME).
+
+Also, please don't hate me after....
+
+https://mintpi.typeform.com/to/GO9srByg
+
+## notjoshjames#3141 02/19/2021
+
+Just letting everyone know, we're working on community guidelines and a code of conduct right now. We're going to try and build a democratic decisioning process, which will take some time. Meanwhile, please continue to make suggestions in #discord-ideas-discussion and use reactions to emphasize ideas that you'd like to see updates on. Let's also try and keep a good signal-to-noise ratio.
+
 ## suddenclaireity#4409 02/19/2021
 
 I’d like to start by once again saying how humbled and amazed I am at the efforts that have been put forth thus far. This announcement will serve as a reminder as well as outlining what to expect.
@@ -8,7 +48,7 @@ I’d like to start by once again saying how humbled and amazed I am at the effo
 - A [code of conduct](CONDUCT.md) was written.
 - An organization/hierarchy document for moderators and their responsibilities in this discord is in process; however, due to timezones, we're not able to finalize this just yet.
 
-## **Make sure you have filled out the introduction survey to be considered in the next steps!**
+**Make sure you have filled out the introduction survey to be considered in the next steps!**
 
 - 🔶 **One-minute Survey**  about what your visions are for this project. This is the first step in taking the ideas throughout discord and narrowing it down.
     - https://mintpi.typeform.com/to/GO9srByg
@@ -34,7 +74,7 @@ The following is a brief overview of the steps I will be making to take this pro
 - [ ] All the eager developers begin contributing, and it becomes an open source project just like anything else out there.
 
 
-## Current Goals
+** Current Goals**
 
 1) There are still over 500 people who have contacted me on Reddit who want to be involved with all sorts of valuable skills that I don’t want to miss out on. I am unfortunately still rate limited on Reddit, so I’m not able to respond directly to the ~300 chat DMs and must open up their Reddit profiles individually and send them a non-chat DM. This is time consuming, but it’s important to be done.
 
@@ -43,8 +83,7 @@ The following is a brief overview of the steps I will be making to take this pro
 3) I will be releasing more information later today regarding a code of conduct as well as guidelines for transparency. These will be provided to you to give feedback on. In the meantime, voice any concerns you have in the questions-comments-and-concerns channel.
 
 
-
-## Address concerns that have been raised
+**Address concerns that have been raised**
 
 
 Regarding structure, finance, and the WSB sub-reddit, I would like to make some clarifications.
@@ -62,8 +101,6 @@ Regarding structure, finance, and the WSB sub-reddit, I would like to make some 
 - Many people have reached out to me regarding similar projects that already exist. I'm keeping an ongoing list of all of these. Once we have a basic structure here, we will reach out to the owners of existing projects and see what we can do collaboratively. Personally, I don't see any need to reinvent the wheel if we don't have to. However, we still need to identify who our technical leaders will be before moving in that direction, and that's still a few days out at least.
 
 **Thank you for your patience as we continue to get started. This is already enormous and while that means we have a lot of long-term sustainability, it means getting started is a little bit slower.**
-
-# Log of Discord Updates
 
 ## suddenclaireity#4409 02/20/2021
 
