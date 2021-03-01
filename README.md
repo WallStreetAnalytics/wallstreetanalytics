@@ -10,7 +10,9 @@ While these organizations have a significant financial advantage over average re
 
 ## Current Updates
 
-There is currently a lot of excitement around this project, and a lot of different directions that people are wanting to go. As we try to get everything organized, and everyone moving in one direction, most of the conversation is taking place in the WallStreet Analytics Discord channel. If you do not have access to the channel, please send a message to u/claireupvotes on Reddit and we will get you added as quickly as possible. For those that would prefer to continue the discussion here, we will do our best to moderate the issues pages.
+There is currently a lot of excitement around this project, and a lot of different directions that people are wanting to go. As we try to get everything organized, and everyone moving in one direction, most of the conversation is taking place in the WallStreet Analytics Discord channel. The link is here: https://discord.gg/xzzQE8yQ9e
+
+For those that would prefer to continue the discussion here, we will do our best to moderate the issues pages.
 
 ## What's the Plan?
 
@@ -18,11 +20,11 @@ Before we can start coding, we first need to get everyone on the same page. It w
 
 1.  ~~Finish inviting the 500 people from Reddit I didn't get to yesterday (DONE!!)~~
 
-2.  Give everyone a chance to fill out the surveys on their qualifications and vision
+2.  ~~Give everyone a chance to fill out the surveys on their qualifications and vision~~
 
-3.  Pick out the strongest technical leaders with the most experience and knowledge balanced with their willingness to be involved, reach out to them, and create appropriate roles for them. If there is any controversy here, we can vote on who these leaders should be to democratize this process. We will discuss the results of the vision survey as well.
+3.  ~~Pick out the strongest technical leaders with the most experience and knowledge balanced with their willingness to be involved, reach out to them, and create appropriate roles for them. If there is any controversy here, we can vote on who these leaders should be to democratize this process. We will discuss the results of the vision survey as well.~~
 
-4.  Get these SME/Tech/PM Stakeholders and reach out together to the people who have already started their own projects in this field and set up some meetings.
+4.  Get these SME/Tech/PM Stakeholders and reach out together to the people who have already started their own projects in this field and set up some meetings.~~
 
 5.  Between our SMEs, we will decide what to keep as a base for our work from what exists already and what those authors are willing to share. There is no reason to reinvent the wheel if we don't have to.
 
