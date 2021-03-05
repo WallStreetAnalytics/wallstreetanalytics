@@ -1,10 +1,22 @@
 # Security Policy
 
-NOTE: Currently, this policy is more for the developers rather the end users. This will however change when there is a MVP and the application is available to users. 
+NOTE: This policy is more developer focused than end-user focused. This will change when there is a MVP and the application is available to users. 
 
-If you are going to contribute to this project, please take some time out to read through this. Follow the set rules and NO exceptions. 
+Before contributing to this project please take some time to read through this. Coordination with the Security team is important to keeping our data and our users safe. 
 
-We focus on the following principles:
+## Reporting a Vulnerability
+
+To report a vulnerability, message @JackDawsen in the Discord for further instructions regarding secure communications about the vulnerability.
+
+Generally we follow the Google Project Zero reporting and disclosure timeline. Vulnerability reporters can choose to claim credit for their findings and we will attach their name as appropriate.
+
+## Security Update Policy
+
+SECURITY.md will be the primary document for security policy and it will be updated as necessary. Because the project is in its early design stages we aren't implementing security measures now. Instead we're documenting security requirements so that they can be implemented as the project gets off the ground.
+
+## Secure Code Standards
+
+This will be addressed as platforms, languages, and frameworks are decided. As development starts we consider the following general principles important:
 
 1. Validate input.
 2. Keep it simple.
@@ -12,71 +24,12 @@ We focus on the following principles:
 4. Adhere to the principle of least privilege.
 5. Sanitize data sent to other systems.
 6. Only store data that you need. 
-7. PII and financial data MUST be encrypted
+7. Personally identifiable information and other non-public data MUST be encrypted.
 
-## Reporting a Vulnerability
+## Communications Security
 
-To report a vulnerability, create a new topic in the Issues. Be straight to the point and precise. 
+All communications into and out of the platform and connections between components must be encrypted. External connections from the platform, such as from web browsers to our web servers, must use TLS. Internal connections, such as from web servers to database servers, must also be encrypted using appropriate configurations. The only exceptions are for external systems that don't support encryption and sensitive or non-public data will not be sent to or requested from those systems.
 
+## Data Storage Security
 
-Types of vulnerabilities to report:
-
-* Code quality issues.
-  * We need overall quality and standardized code.
-* Improper error handling.
-  * Errors must only provide the necessary information to the user and not provide reveal any sensitive information
-* Improper/non-existent input validation.
-  * Focus on SQL injection and Cross-site scripting (XSS). 
-* Sensitive credentials stored as code/config.
-* Directory traversal.
-
-This is a completely crowd sourced project and thus, there is no bug bounty as of now. However, this may change in the future.
-
-## Security Update policy
-
-As the security policy get updated, the community will be notified. The exact channels to be used is still yet to be decided. As of now, SECURITY.md will be the main channel for security updates.
-
-## Known security gaps & future enhancements
-
-Since the project is in its early stages of design, there is much to do before we can implement security measures. Keep a look out for this section in the future. Suggestions are also welcome.
-
-## Secure Coding policiy
-
-### Proper DB Connection
-
-Only keep DB connections for as long as necessary and close them promptly
-
-## UX/UI Security
-
-Design for security. 
-
-### 1. Different actions must look different. 
-
-An user might perform critical tasks that might have dramatic impact, for example chanigng his password. In this case, the UI must make it clear what it is user needs to do right now. Conformaition feedback is also necessary. 
-
-Use of appropriate icons is necessary.
-
-### 2. Show the user what will happen next
-
-Predictability is important and users will appreciate it. For example, if a link is bringing the user to another website or application, let them know before hand. 
-
-### 3. Show only necessary information.
-
-Do not present too much information. This will help the UI stay clean and not overwhelm the user. Not to mention, any sensitive information such as passwords needs to be masked using *s.
-
-### 4. Never trade seucurity over beauty.
-
-I know, we all love a clean minimalistic website but it must not compromise security. 
-
-## PII handling
-
-
-## OPT IN & OPT OUT Policy
-
-We must treat the users with utmost respect to their information. If the user are not willing to provide their information, they must be able to choose to out of any personal information collection. If they do choose to opt out, all previously stored information must be purged and no backup may be stored. 
-
-If the user is comfortable with providing us their informaiton, they can choose to opt in. At no point shall we collect user information without clearly asking for the user's permission. 
-
-
-
- 
+All stored user data must be encrypted. Financial data of a non-public nature must be encrypted. Credentials, access tokens, and other user-specific access devices must be encrypted using a salt that is different between users.  
