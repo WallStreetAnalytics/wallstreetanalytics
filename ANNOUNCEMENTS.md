@@ -367,3 +367,35 @@ This category has absorbed Compliance due to overlapping candidates
   - @sk279 (UX)  (sk279#3029)
 
   Congratulations and thank you to all of you! :slight_smile:
+
+
+## Jerm#0762 03/03/2021
+
+Hey `@everyone`!
+
+Please fill out this quick survey about your investment resources:
+
+https://forms.gle/T9zFAZ8oQdB4dJyQ8
+
+This will help SMEs with the next steps in planning the project!
+
+## suddenclaireity#4409 03/05/2021
+
+Hey everyone! Later today, we're going to be drastically reducing the number of channels in this discord in other to make it easier to follow productive conversation. I've added a few extra off-topic channels to compensate!
+
+Going forward, we expect all conversation in the remaining channels to be related and productive to the project we're working on. Tangents and conversations should go to a channel in the off-topic section.
+
+__**If you do not follow this, please be aware that our moderator team may remove your messages in order to filter out the noise and help us stay on track.**__
+
+If you're interested in becoming a discord moderator, please fill out this survey: https://forms.gle/HpkKNaTUXywqMwAc7
+
+Responsibilities include but are not necessarily limited to:
+
+* Enforcing the code of conduct, including punishing members who do not follow it
+* Flagging potential sensitive issues for admins
+* Setting up and maintaining discord bots
+* Setting up and maintaining discord channels
+* Answering general questions, reminding people to check the announcements and pinned messages
+* Assigning appropriate roles to members
+* Assisting with writing up meeting minutes and distributing them
+* Removing off-topic content
