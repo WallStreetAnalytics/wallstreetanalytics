@@ -1,0 +1,40 @@
+version: '3'
+
+volumes:
+  base-data:
+  mongodb-data:
+
+services:
+  mongodb:
+    restart: always
+    env_file:
+      - .env
+    build:
+      context: ./mongodb
+      dockerfile: ./Dockerfile
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb-data:/data/db
+
+  edgar:
+    restart: always
+    env_file:
+      - .env
+    build:
+      context: ./edgar
+      dockerfile: ./Dockerfile
+      args:
+        requirements_file: 'dev.txt'
+    ports:
+      - '5000:5000'
+    # wait for mongo and run a simple python http server to keep the serivce running
+    command: bash -c "waitforit -host=mongodb -port=27017 --timeout 30 && python3 -m http.server 5000"
+    depends_on:
+      - mongodb
+    environment:
+      - PYTHONUNBUFFERED=0
+    volumes:
+      - base-data:/data
+      - ./edgar/:/code
+  

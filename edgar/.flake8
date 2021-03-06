@@ -1,0 +1,4 @@
+[flake8]
+max-line-length=100
+exclude=__init__.py
+ignore=F403,F405,W605,W503,E203,E231

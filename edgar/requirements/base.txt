@@ -1,0 +1,8 @@
+# db
+mongoengine==0.20.0
+
+# utils
+aiohttp==3.6.2
+pandas==1.2.2
+python-edgar==3.0.2
+beautifulsoup4==4.9.3
