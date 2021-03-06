@@ -26,10 +26,16 @@ This will be addressed as platforms, languages, and frameworks are decided. As d
 6. Only store data that you need. 
 7. Personally identifiable information and other non-public data MUST be encrypted.
 
+Encryption standards can be higher than, but not less than:
+
+- AES-256 for symmetric encryption in block/streaming modes
+- RSA-4096 for asymmetric encryption
+- SHA2 for hashing, supplemented by HMAC where appropriate
+
 ## Communications Security
 
 All communications into and out of the platform and connections between components must be encrypted. External connections from the platform, such as from web browsers to our web servers, must use TLS. Internal connections, such as from web servers to database servers, must also be encrypted using appropriate configurations. The only exceptions are for external systems that don't support encryption and sensitive or non-public data will not be sent to or requested from those systems.
 
 ## Data Storage Security
 
-All stored user data must be encrypted. Financial data of a non-public nature must be encrypted. Credentials, access tokens, and other user-specific access devices must be encrypted using a salt that is different between users.  
+All stored user data must be encrypted. Financial data of a non-public nature must be encrypted. Credentials, access tokens, and other user-specific access devices must be hashed using a salt that is different between users. Credentials, access tokens, and other access devices that must be used by the system to access external systems must be encrypted at rest.
