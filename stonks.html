@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stonks</title>
+</head>
+<body>
+
+
+<div id="inputarea">
+	<input type="text" class="num_data_points" placeholder="num_data_points">
+	<input type="text" class="stockname" placeholder="stockname">
+</div>
+<canvas id="stockPriceOverTime" width="400" height="400"></canvas>
+
+<script type="text/javascript">
+	
+	document.addEventListener('DOMContentLoaded', (event) => {
+	// function () {
+
+	// }
+
+    $('.stockname').keypress(function(event) {
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if (keycode == '13') {
+            let stockSymbol = $('.stockname').val();
+            let dataLimit = $('.num_data_points').val() || 50;
+            let API_KEY = ''  // https://www.alphavantage.co/support/#api-key
+
+            console.log(stockSymbol)
+
+            fetch('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol='+ stockSymbol + '&apikey=' + API_KEY) // 
+                .then(response => response.json())
+                .then(data => {
+            let time_series_data = data["Time Series (Daily)"]
+            let dates = []
+            let prices = []
+
+
+
+            for (var key in time_series_data) {
+                if (time_series_data.hasOwnProperty(key)) {
+                    dates.push(key);
+                    prices.push(time_series_data[key]["4. close"]);
+                }
+            }
+
+
+            var ctx = document.getElementById('stockPriceOverTime').getContext('2d');
+            var stockPriceOverTime = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: dates.reverse().slice(80),
+                    datasets: [{
+                        label: 'Price of Stock',
+                        pointRadius: 5,
+                        pointHoverRadius: 30,
+                        data: prices.reverse().slice(80),
+                        borderColor: ['rgba(255, 199, 132, 1)'],
+                        borderWidth: 3
+                    }]
+                },
+                options: {
+                    tooltips: {
+                        callbacks: {
+                            label: function(t, d) {
+                                var xLabel = d.datasets[t.datasetIndex].label;
+                                var yLabel = t.yLabel >= 1000 ? '$' + t.yLabel.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") : '$' + t.yLabel;
+                                return xLabel + ': ' + yLabel;
+                            }
+                        }
+                    },
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: false,
+                                callback: function(value, index, values) {
+                                    return '$' + value;
+                                }
+                            }
+                        }]
+                    }
+                }
+            });
+
+
+            })
+
+        }
+    });
+
+})
+
+
+
+
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+
+
+</body>
+</html>
